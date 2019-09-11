@@ -33,7 +33,8 @@ export default {
         font-weight: bolder;
         font-size: 14px;
         .xz{
-
+          border-width: 100px;
+          border-color: #eb2211;
         }
       }
     }
