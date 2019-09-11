@@ -7,7 +7,7 @@
 <script>
   export default {
     mounted() {
-      document.body.scrollTop = document.body.scrollHeight; //解决input框问题
+      // document.body.scrollTop = document.body.scrollHeight; //解决input框问题
       document.getElementById('app').style.height = document.documentElement.clientHeight + 'px'
       document.addEventListener('plusready', function() {
         var webview = plus.webview.currentWebview();

@@ -65,6 +65,7 @@ export default {
       text-align: center;
       margin: 20px 0 30px;
       input{
+        color: #333;
         border: none;
         outline: none;
         background-color: #fff;
