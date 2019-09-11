@@ -1,6 +1,6 @@
 <template>
     <div class="register">
-      <h1>商城伴侣</h1>
+      <h1>商旅伴侣</h1>
       <div class="select">
         <div><span></span>商户</div>
         <div><span></span>供应商</div>
