@@ -30,7 +30,7 @@ export default {
   .register{
     background-image: url("./../assets/register.jpg");
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     color: #fff;
     overflow: hidden;
     .user-code{

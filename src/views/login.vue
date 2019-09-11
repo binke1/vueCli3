@@ -6,14 +6,14 @@
         <div><span></span>供应商</div>
       </div>
       <div class="user-info">
-        <input placeholder="账号" type="text">
-        <input placeholder="密码" type="password">
+        <input v-model="loginData.name" placeholder="账号" type="text">
+        <input v-model="loginData.password" placeholder="密码" type="password">
         <div class="forget">
           <span>忘记密码？</span>
         </div>
       </div>
       <div class="user-btn">
-        <button @click="$router.push('/home')">登录</button>
+        <button @click="login">登录</button>
         <button @click="$router.push('/register')">注册</button>
       </div>
     </div>
@@ -21,7 +21,30 @@
 
 <script>
 export default {
-  name: 'login'
+  name: 'login',
+  data() {
+    return {
+      loginData: {
+        name: null,
+        password: null
+      }
+    }
+  },
+  mounted () {
+    window.onresize = () => {
+      // document.getElementsByClassName('login')[0].style.backgroundImage = "url('./../assets/login.jpg')"
+      // document.getElementsByClassName('login')[0].style.backgroundSize = 'cover'
+    }
+  },
+  methods: {
+    login () {
+      if (this.loginData.name==='test' && this.loginData.password==='123456') {
+        this.$router.push('/home')
+      } else {
+        this.$toast('用户名或密码不正确')
+      }
+    }
+  }
 }
 </script>
 
@@ -29,7 +52,7 @@ export default {
   .login{
     background-image: url("./../assets/login.jpg");
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     color: #fff;
     overflow: hidden;
     .user-btn{
