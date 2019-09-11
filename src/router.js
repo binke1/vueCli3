@@ -23,6 +23,13 @@ export default new Router({
         default: () => import('./views/index.vue'),
         tabbar: tabbar
       }
+    }, {
+      path: '/personalCenter',
+      name: 'personalCenter',
+      components: {
+        default: () => import('./views/personalCenter.vue'),
+        tabbar: tabbar
+      }
     }
   ]
 })

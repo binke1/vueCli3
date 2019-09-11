@@ -6,6 +6,7 @@
           <div>采购地点</div>
          <div class="xz"></div>
         </div>
+        <div class="user"></div>
       </div>
     </div>
 </template>
@@ -21,6 +22,12 @@ export default {
     height: 100vh;
     background-color: #f4f4f4;
     overflow: hidden;
+    .user{
+      width: 80%;
+      margin: 15px auto;
+      box-shadow: 1px 1px 10px rgba(128,128,128) inset;
+      height: 70px;
+    }
     .plate{
       width: 80%;
       margin: 200px auto 0;
@@ -33,11 +40,12 @@ export default {
         font-weight: bolder;
         font-size: 14px;
         .xz{
-          border-width: 100px;
-          border-color: #eb2211;
-          border-style: solid;
+          margin: auto;
           width: 0;
           height: 0;
+          border: 10px solid;
+          border-color: transparent transparent red;
+          transform: rotateX(180deg);
         }
       }
     }

@@ -1,8 +1,9 @@
 <template>
     <div class="tabbar">
-      <div><van-icon name="wap-home"></van-icon>
+      <div :class="isHome?'':'active'" @click="changeTab('/home')"><van-icon name="wap-home"></van-icon>
       <div>首页</div></div>
-      <div class="active"><van-icon name="contact"></van-icon>
+      <div @click="changeTab('/personalCenter')" :class="isHome?'active':''">
+        <van-icon name="contact"></van-icon>
       <div>我的</div>
       </div>
       <div class="center">
@@ -13,7 +14,22 @@
 
 <script>
     export default {
-        name: "tabbar"
+        name: "tabbar",
+      data() {
+          return {
+            isHome: true
+          }
+      },
+      methods: {
+        changeTab(router) {
+          if (router ==='/home') {
+            this.isHome = true
+          } else {
+            this.isHome = false
+          }
+          this.$router.push(router)
+          }
+      }
     }
 </script>
 
