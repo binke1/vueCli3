@@ -35,6 +35,9 @@ export default {
         .xz{
           border-width: 100px;
           border-color: #eb2211;
+          border-style: solid;
+          width: 0;
+          height: 0;
         }
       }
     }
